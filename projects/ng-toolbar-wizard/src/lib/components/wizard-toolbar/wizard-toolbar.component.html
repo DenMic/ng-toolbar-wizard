@@ -1,0 +1,29 @@
+<div class="container-fluid p-0" class="container-top-inside-menu">
+    <div class="item-container">
+        <div class="back-icon-container">
+            <i class="back-icon" (click)="back()"></i>
+        </div>
+        <div class="page-icon">
+            <img [src]="imgPath" class="img-page-icon" />
+        </div>
+        <div class="title-container">
+            <span class="title-top-inside-menu">{{ getTitleToolbar() }}</span>
+        </div>
+
+        <div class="align-self-center content-top-inside-menu">
+            <ng-content></ng-content>
+        </div>
+
+        <div class="btn-top-inside-menu">
+            <button mat-stroked-button color="warn" class="manage-button" (click)="cancelWizard()">{{ getCancelText() }}</button>
+        </div>
+        <div class="btn-top-inside-menu" color="primary" >
+            <button mat-stroked-button class="manage-button" (click)="prevStep()" [disabled]="step == 1">{{ getPrevText() }}</button>
+        </div>
+        <div class="btn-top-inside-menu" color="primary" >
+            <button mat-stroked-button class="manage-button" (click)="nextStep()">{{ getNextText() }}</button>
+        </div>
+    </div>
+</div>
+  
+  

@@ -1,0 +1,23 @@
+<app-wizard-toolbar 
+    [step]="wizardStep"
+    title="Test Wizard"
+    [totalStep]="advanceSearchStep.length" 
+    [imgPath]="imgPath"
+    
+    [textPrev]="textPrev"
+    [textNext]="textNext"
+    [confirmNext]="confirmNext"
+    [textCancel]="textCancel"
+
+    (onBackEvent)="backEvent()"
+    (onCancelEvent)="cancelEvent()"
+    (onNextStepEvent)="nextStep($event)" 
+    (onPrevStepEvent)="prevStep($event)"
+    (onCompleteWizardEvent)="completeWizard($event)">
+</app-wizard-toolbar>
+
+<!-- <div [@routeAnimations]="prepareRoute(outlet)"> -->
+    <router-outlet 
+        #outlet="outlet"
+        (activate)="onActivate($event)"></router-outlet>
+<!-- </div> -->
