@@ -13,11 +13,12 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 export class NgToolbarWizardComponent {
   @Input() advanceSearchStep: StepPage[];
   @Input() imgPath: string;
+  @Input() title: string;
 
-  @Input() textPrev: string;
-  @Input() textNext: string;
-  @Input() confirmNext: string;
-  @Input() textCancel: string;
+  @Input() textPrev = 'Previous';
+  @Input() textNext = 'Next';
+  @Input() confirmNext = 'Confirm';
+  @Input() textCancel = 'Cancel';
 
   @Output() onNextStepEvent = new EventEmitter<number>();
   @Output() onPrevStepEvent = new EventEmitter<number>();
