@@ -29,7 +29,8 @@ In the Wizard page we have to import the NgToolbarWizardModule module. Once this
 
     (onCompleteWizardEvent)="completeEvent()"
     (onCancelEvent)="cancelEvent()"
-    (onBackEvent)="backEvent()">
+    (onBackEvent)="backEvent()"
+    (onValidateEvent)="validateEvent($event)">
 </ng-toolbar-wizard>
 ```
 
@@ -97,6 +98,8 @@ export class FirstStepComponent implements ISubPage {
   }
 }
 ```
+
+If at the change of page, isValidForm returns one or more errors, the onValidateEvent event is launched, with the errors found (string []), so that you can manage the errors as you wish.
 
 The last step is to correctly set up the router.module of the wizard.
 
