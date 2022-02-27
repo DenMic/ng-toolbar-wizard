@@ -4,7 +4,7 @@ NgToolbarWizard is used to facilitate the creation of wizards, using navigation 
 
 At the passage of each step, a custom validation of the page is made, and it is possible to perform more actions than the simple passage of steps, using the page data.
 
-<img src="./img/Toolbar.png">
+<img src="https://github.com/DenMic/ng-toolbar-wizard/blob/main/projects/ng-toolbar-wizard/img/Toolbar.png?raw=true">
 
 ## Getting Started
 
@@ -12,7 +12,7 @@ We take into consideration that the structure is on two levels.
 - The wizard page
   - The sub pages
 
-<img src="./img/Structure.png">
+<img src="https://github.com/DenMic/ng-toolbar-wizard/blob/main/projects/ng-toolbar-wizard/img/Structure.png?raw=true">
 
 In the Wizard page we have to import the NgToolbarWizardModule module. Once this is done, you can use our component.
 
@@ -70,7 +70,7 @@ NextStep and prevStep have as input a parameter which is a custom object derivin
 
 ## Child Page
 
-<img src="./img/child-page.png">
+<img src="https://github.com/DenMic/ng-toolbar-wizard/blob/main/projects/ng-toolbar-wizard/img/child-page.png?raw=true">
 
 The child pages must implement ISubPage, an interface exposed by the library which forces to implement two methods:
 - getValue (): method that returns an object of any type which is intercepted by the nextStep and prevStep methods explained above;
