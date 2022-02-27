@@ -40,6 +40,8 @@ advanceSearchStep is a StepPage [] that defines:
 - A method to perform additional actions on the return of the previous step (optional).
 
 ```ts
+import { StepPage } from 'node_modules/ng-toolbar-wizard/interface/step-page';
+
 advanceSearchStep: StepPage[] = [
     {
       step: 1,
@@ -69,11 +71,13 @@ NextStep and prevStep have as input a parameter which is a custom object derivin
 
 <img src="./img/child-page.png">
 
-Le pagine figlio devono implementare ISubPage, interfaccia esposta dalla libreria la quale obbliga ad implementare due metodi:
-- getValue(): metodo che ritorna un oggetto di qualsiasi tipo il quale viene intercettato dal metodo nextStep e prevStep spiegati prima;
-- isValidForm(): metodo che serve per la validazione della pagina, richiamato al click del nextStep
+The child pages must implement ISubPage, an interface exposed by the library which forces to implement two methods:
+- getValue (): method that returns an object of any type which is intercepted by the nextStep and prevStep methods explained above;
+- isValidForm (): method used to validate the page, called upon nextStep click
 
 ```ts
+import { ISubPage } from 'node_modules/ng-toolbar-wizard/interface/sub-page';
+
 @Component({
   selector: 'app-first-step',
   templateUrl: './first-step.component.html',
@@ -127,4 +131,4 @@ const routes: Routes = [
 export class WizardRoutingModule { }
 ```
 
-Potete trovare un esempio di implementazione a questo link: https://github.com/DenMic/ng-toolbar-wizard
+You can find an example of implementation at this link: https://github.com/DenMic/ng-toolbar-wizard
