@@ -1,7 +1,7 @@
 {
   "name": "ng-toolbar-wizard",
   "description": "NgToolbarWizard is used to facilitate the creation of wizards, using navigation through the Angular router.",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "homepage": "https://github.com/DenMic/ng-toolbar-wizard/blob/main/projects/ng-toolbar-wizard/README.md",
   "license": "MIT",
   "author": {
