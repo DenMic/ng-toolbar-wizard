@@ -62,7 +62,6 @@
               "projects/test-lib/src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/test-lib/src/styles.scss"
             ],
             "scripts": []
@@ -131,7 +130,6 @@
               "projects/test-lib/src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/test-lib/src/styles.scss"
             ],
             "scripts": []
