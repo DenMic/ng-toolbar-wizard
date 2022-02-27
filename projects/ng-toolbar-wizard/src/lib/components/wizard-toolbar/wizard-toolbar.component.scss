@@ -68,6 +68,21 @@
 
             >.manage-button{
                 width: 6.5rem;
+                background-color: transparent;
+                background-clip: border-box;
+                background-image: none;
+                border-radius: 4px;
+                border: 1px solid rgba(118, 118, 118, 0.3);
+                line-height: 34px;
+
+                &:not([disabled]):hover{
+                    cursor: pointer;
+                    background-color: rgba(118, 118, 118, 0.1);
+                }
+
+                &.warn{
+                    color: rgb(244, 67, 54);
+                }
             }
         }
     }
