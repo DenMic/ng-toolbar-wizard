@@ -41,4 +41,8 @@ export class WizardComponent {
   backEvent() {
     console.log('back');
   }
+
+  validateEvent(msg: string[]){
+    alert(msg);
+  }
 }

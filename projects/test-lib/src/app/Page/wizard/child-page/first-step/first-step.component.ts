@@ -14,10 +14,10 @@ export class FirstStepComponent implements ISubPage {
   }
 
   *isValidForm(): IterableIterator<string> {
-    if(false)  
+    if(true)  
       yield 'prova';
       
-    if(false)
+    if(true)
       yield 'msg';
   }
 
