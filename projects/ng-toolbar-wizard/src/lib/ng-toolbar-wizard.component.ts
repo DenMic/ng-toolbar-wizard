@@ -61,10 +61,10 @@ export class NgToolbarWizardComponent {
   }
 
   completeWizard(step: number) {
-    this.onCompleteWizardEvent.emit(step);
-
     if(this.isFormValid()) {
       this.executeNextStep(step);
+
+      this.onCompleteWizardEvent.emit(step);
     }
   }
 
