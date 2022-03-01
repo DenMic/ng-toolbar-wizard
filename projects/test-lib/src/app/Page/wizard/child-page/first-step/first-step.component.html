@@ -1,1 +1,26 @@
-<p>first-step works!</p>
+<div style="padding: 1rem">
+    <h3>first-step</h3>
+
+    <form [formGroup]="testForm">
+        <div class="d-control">
+            <div class="d-label">
+                <label for="name">Name</label>
+            </div>
+            <input type="text" id="name" formControlName="name" required>
+        </div>
+        <div class="d-control">
+            <div class="d-label">
+                <label for="lastName">Last Name</label>
+            </div>
+            <input type="text" id="lastName" formControlName="lastName">
+        </div>
+        <div class="d-control">
+            <div class="d-label">
+                <label for="name">Age</label>
+            </div>
+            <input type="number" id="age" formControlName="age">
+        </div>
+    </form>
+</div>
+
+

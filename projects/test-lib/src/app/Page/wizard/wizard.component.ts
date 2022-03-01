@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { StepPage } from 'dist/ng-toolbar-wizard/interface/step-page';
+import { ValidateWizard } from 'dist/ng-toolbar-wizard/interface/validate-wizard';
 
 @Component({
   selector: 'app-wizard',
@@ -42,7 +43,8 @@ export class WizardComponent {
     console.log('back');
   }
 
-  validateEvent(msg: string[]){
-    alert(msg);
+  validateEvent(validateWizard: ValidateWizard){
+    if(validateWizard.error.length > 0 && validateWizard.idStep == 1)
+      alert(validateWizard.error[0].keyError);
   }
 }
