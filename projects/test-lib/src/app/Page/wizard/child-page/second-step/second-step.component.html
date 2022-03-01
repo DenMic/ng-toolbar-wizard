@@ -1,1 +1,18 @@
-<p>second-step works!</p>
+<div style="padding: 1rem">
+    <h3>second-step</h3>
+
+    <form [formGroup]="testForm">
+        <div class="d-control">
+            <div class="d-label">
+                <label for="address">Address</label>
+            </div>
+            <input type="text" id="address" formControlName="address" required>
+        </div>
+        <div class="d-control">
+            <div class="d-label">
+                <label for="mobile">Mobile</label>
+            </div>
+            <input type="text" id="mobile" formControlName="mobile">
+        </div>
+    </form>
+</div>

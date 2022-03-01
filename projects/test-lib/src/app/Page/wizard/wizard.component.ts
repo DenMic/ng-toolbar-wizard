@@ -44,7 +44,11 @@ export class WizardComponent {
   }
 
   validateEvent(validateWizard: ValidateWizard){
-    if(validateWizard.error.length > 0 && validateWizard.idStep == 1)
-      alert(validateWizard.error[0].keyError);
+    if(validateWizard.error.length > 0)
+      alert(validateWizard.error[0].control + ' ' + validateWizard.error[0].keyError);
+  }
+
+  completeWizard() {
+    alert('End');
   }
 }
