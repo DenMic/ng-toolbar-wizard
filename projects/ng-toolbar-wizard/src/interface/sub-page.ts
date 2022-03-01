@@ -1,4 +1,4 @@
 export interface ISubPage {
     getValue(): any;
-    isValidForm(): IterableIterator<string>;
+    isValidForm(): IterableIterator<any>;
 }

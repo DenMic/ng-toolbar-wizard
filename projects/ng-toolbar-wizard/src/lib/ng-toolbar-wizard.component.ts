@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { StepPage } from '../interface/step-page';
 import { ISubPage } from '../interface/sub-page';
+import { ValidateWizard } from '../interface/validate-wizard';
 
 @Component({
   selector: 'ng-toolbar-wizard',
@@ -25,7 +26,7 @@ export class NgToolbarWizardComponent {
   @Output() onBackEvent = new EventEmitter<boolean>();
   @Output() onCancelEvent = new EventEmitter<boolean>();
 
-  @Output() onValidateEvent = new EventEmitter<string[]>();
+  @Output() onValidateEvent = new EventEmitter<ValidateWizard>();
 
   private outletComponent: ISubPage;
   public wizardStep = 1;
@@ -82,13 +83,10 @@ export class NgToolbarWizardComponent {
     const error = Array.from(this.outletComponent.isValidForm());
 
     if(error.length > 0) {
-      // const msg = error.reduce((prev, cur) => {
-      //   return `${prev} ${cur}`;
-      // });
-
-      // TODO: notify Error
-      // this.snackBar.open(msg, "Ok", { duration: 2500 });
-      this.onValidateEvent.emit(error);
+      this.onValidateEvent.emit({
+        idStep: this.wizardStep,
+        error: error
+      });
       isValid = false;
     }
 
