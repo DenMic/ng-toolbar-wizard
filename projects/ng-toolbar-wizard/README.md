@@ -4,7 +4,7 @@ NgToolbarWizard is used to facilitate the creation of wizards, using navigation 
 
 At the passage of each step, a custom validation of the page is made, and it is possible to perform more actions than the simple passage of steps, using the page data.
 
-<img src="https://github.com/DenMic/ng-toolbar-wizard/blob/main/projects/ng-toolbar-wizard/img/Toolbar.png?raw=true">
+<img src="https://github.com/DenMic/ng-toolbar-wizard/blob/main/projects/ng-toolbar-wizard/img/Wizard.gif?raw=true">
 
 ## Getting Started
 

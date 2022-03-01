@@ -49,6 +49,6 @@ export class WizardComponent {
   }
 
   completeWizard() {
-    alert('End');
+    alert('Complete Wizard');
   }
 }
